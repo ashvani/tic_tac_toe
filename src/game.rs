@@ -35,7 +35,7 @@ impl Game {
     }
 
     pub fn is_valid_index(&self, index: usize) -> bool {
-       if index > 8 || self.matrix[index] == ' ' {
+       if index < 9 && self.matrix[index] == ' ' {
            true 
        } else {
            false 
