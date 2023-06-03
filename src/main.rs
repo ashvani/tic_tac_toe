@@ -7,12 +7,12 @@ fn main() {
 
     loop {
 
+        println!("---------------------------------");
         let mut index = String::new();
         println!("\t{}'s turn", game_status.player());
         print!("\tEnter a number (1 to 9): ");
         let _ = io::stdout().flush();
         io::stdin().read_line(&mut index).unwrap();
-        println!("");
         let index: usize = index.trim().parse().unwrap();
         let index = index - 1;
 
@@ -25,11 +25,11 @@ fn main() {
         let status = game_status.status();
         match status {
             0 => {
-                println!("\tCongratulations! {} won!", game_status.player());
+                println!("\tCongratulations! {} won!\n", game_status.player());
                 break;
             }
             1 => {
-                println!("\tGame Drew!");
+                println!("\tGame Drew!\n");
                 break;
             }
             _ => ()
