@@ -7,7 +7,7 @@ fn main() {
 
     loop {
 
-        println!("---------------------------------");
+        println!("-----------------------------------");
         let mut index = String::new();
         println!("\t{}'s turn", game_status.player());
         print!("\tEnter a number (1 to 9): ");
@@ -36,7 +36,6 @@ fn main() {
         }
 
         game_status.update_index();
-
     }
 
 }
